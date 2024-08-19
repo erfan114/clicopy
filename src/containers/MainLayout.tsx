@@ -1,7 +1,6 @@
 import { ParentProps } from "solid-js";
 
-type MainLayoutProps = {} & ParentProps;
-export default function MainLayout({ children }: MainLayoutProps) {
+export default function MainLayout({ children }: ParentProps) {
     return <div class="w-screen h-screen">
         {children}
     </div>

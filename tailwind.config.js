@@ -4,7 +4,15 @@ module.exports = {
         "./src/**/*.{js,jsx,ts,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                recursive: "'Recursive Variable'",
+                openSans: "'Open Sans Variable'"
+            }
+        },
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/container-queries'),
+    ],
 }

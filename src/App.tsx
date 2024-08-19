@@ -1,17 +1,23 @@
-import { createSignal } from "solid-js";
 import "./App.css";
+import CardList from "./components/CardList";
+import ModalManager from "./containers/ModalManager";
+import NewEntryButton from "./components/NewEntryButton";
+import Search from "./components/Search";
+import { Toaster } from "solid-toast";
 
 function App() {
-    const [greetMsg, setGreetMsg] = createSignal("");
-    const [name, setName] = createSignal("");
 
     return (
-        <div class="container">
-            <h1>Welcome to Tauri!</h1>
-
-            <p>Click on the Tauri, Vite, and Solid logos to learn more.</p>
-
-            <p>{greetMsg()}</p>
+        <div class="font-recursive prose-stone flex flex-col w-full p-3 gap-2 h-full">
+            <div class="flex flex-col gap-2">
+                <div class="w-full grid grid-cols-[auto_170px] gap-2">
+                    <Search />
+                    <NewEntryButton />
+                </div>
+            </div>
+            <CardList />
+            <ModalManager />
+            <Toaster position="bottom-left" />
         </div>
     );
 }

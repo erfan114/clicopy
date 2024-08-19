@@ -2,18 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-	font-size: 16px;
-	line-height: 24px;
-	font-weight: 400;
 
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:root {
 	color: #0f0f0f;
-	background-color: #f6f6f6;
+	background-color: #e5e5e5;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
+}
+
+#root {
+	height: 100vh;
+}
+
+::-webkit-scrollbar {
+	width: .3rem;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(145, 145, 145);
+	border-radius: 1rem;
 }
