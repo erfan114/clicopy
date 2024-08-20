@@ -3,6 +3,7 @@ import { render } from "solid-js/web";
 
 import '@fontsource-variable/recursive';
 import '@fontsource-variable/open-sans';
+import '@fontsource-variable/vazirmatn';
 
 import "./styles.css";
 import App from "./App";

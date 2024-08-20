@@ -6,8 +6,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                recursive: "'Recursive Variable'",
-                openSans: "'Open Sans Variable'"
+                recursive: "'Recursive Variable', 'Vazirmatn Variable'",
+                openSans: "'Open Sans Variable', 'Vazirmatn Variable'",
             }
         },
     },
@@ -15,4 +15,4 @@ module.exports = {
         require('@tailwindcss/typography'),
         require('@tailwindcss/container-queries'),
     ],
-}
+};
