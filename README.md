@@ -1,6 +1,9 @@
 # Clicopy v1.0.0
 
-The application that is written for saving some texts into your desktop and copy them easier
+An application that is written for saving some texts into your desktop and copy them easier
+
+> [!TIP]
+> The main reason that I wrote this code is [@sajjadcnr12](https://github.com/sajjadcnr12)
 
 # Features
 - ✅ Saving your texts into DB within name and description
@@ -17,5 +20,5 @@ The application that is written for saving some texts into your desktop and copy
 3. 🖥 Run `bun tauri dev` or `npm run tauri dev` to run application in development mode
 4. ✅ If you want to build it use `bun tauri build` or `npm run tauri build`
 
-## Note
-😅 This is my first application using `Tauri` and `Solidjs`, sooo don't be rude about it and if there is any problems please tell me directly.
+> [!NOTE]
+> 😅 This is my first application using `Tauri` and `Solidjs`, sooo don't be rude about it and if there is any problems please tell me (In a good way.
