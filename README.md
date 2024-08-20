@@ -1,7 +1,15 @@
-# Tauri + Solid + Typescript
+# Clicopy v1.0.0
 
-This template should help get you started developing with Tauri, Solid and Typescript in Vite.
+The application that is written for saving some texts into your desktop and copy them easier
 
-## Recommended IDE Setup
+# Features
+- ✅ Saving your texts into DB within name and description
+- ✅ Entries are editable and deletable
+- ✅ Supports both `Persian` and `English` language
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+# Todos
+- ⬜ Application settings (Language, Theme, DB Location)
+- ⬜ Image for entries (You can add image on your entries)
+
+## Note
+This is my first application using `Tauri` and `Solidjs`, sooo don't be rude about it and if there is any problems please tell me directly.
