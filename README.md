@@ -2,6 +2,11 @@
 
 An application that is written for saving some texts into your desktop and copy them easier
 
+# Features
+- ✅ Saving your texts into DB within name and description
+- ✅ Entries are editable and deletable
+- ✅ Supports both `Persian` and `English` language
+
 # Showcase
 ![Image of main page](https://github.com/erfan114/clicopy/blob/main/assets/images/image_1.png)
 
@@ -15,11 +20,6 @@ An application that is written for saving some texts into your desktop and copy 
 # How to use
 - ▶ Click on the `entry` to copy the url
 - ▶ Double click on the `entry` to edit it
-
-# Features
-- ✅ Saving your texts into DB within name and description
-- ✅ Entries are editable and deletable
-- ✅ Supports both `Persian` and `English` language
 
 # Todos
 - ⬜ Application settings (Language, Theme, DB Location)
