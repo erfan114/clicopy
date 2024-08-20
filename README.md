@@ -12,4 +12,4 @@ The application that is written for saving some texts into your desktop and copy
 - ⬜ Image for entries (You can add image on your entries)
 
 ## Note
-This is my first application using `Tauri` and `Solidjs`, sooo don't be rude about it and if there is any problems please tell me directly.
+😅 This is my first application using `Tauri` and `Solidjs`, sooo don't be rude about it and if there is any problems please tell me directly.
