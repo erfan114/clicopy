@@ -2,6 +2,7 @@
 
 An application that is written for saving some texts into your desktop and copy them easier
 
+# Showcase
 ![Image of main page](https://github.com/erfan114/clicopy/blob/main/assets/images/image_1.png)
 
 ![Image of adding new entry](https://github.com/erfan114/clicopy/blob/main/assets/images/image_2.png)
@@ -11,6 +12,9 @@ An application that is written for saving some texts into your desktop and copy 
 > [!TIP]
 > The main reason why I wrote this code is [@sajjadcnr12](https://github.com/sajjadcnr12)
 
+# How to use
+- ▶ Click on the `entry` to copy the url
+- ▶ Double click on the `entry` to edit it
 
 # Features
 - ✅ Saving your texts into DB within name and description
