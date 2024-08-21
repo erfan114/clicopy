@@ -3,27 +3,30 @@
 An application that is written for saving some texts into your desktop and copy them easier
 
 ![Image of main page]
-(https://github.com/erfan114/clicopy/blob/main/assets/images/image_1.png)
+(<https://github.com/erfan114/clicopy/blob/main/assets/images/image_1.png>)
 
 ![Image of adding new entry]
-(https://github.com/erfan114/clicopy/blob/main/assets/images/image_2.png)
+(<https://github.com/erfan114/clicopy/blob/main/assets/images/image_2.png>)
 
 ![Image of editing an entry]
-(https://github.com/erfan114/clicopy/blob/main/assets/images/image_3.png)
+(<https://github.com/erfan114/clicopy/blob/main/assets/images/image_3.png>)
 
 > [!TIP]
 > The main reason why I wrote this code is [@sajjadcnr12](https://github.com/sajjadcnr12)
 
-# Features
+## Features
+
 - ✅ Saving your texts into DB within name and description
 - ✅ Entries are editable and deletable
 - ✅ Supports both `Persian` and `English` language
 
-# Todos
+## Todos
+
 - ⬜ Application settings (Language, Theme, DB Location)
 - ⬜ Image for entries (You can add image on your entries)
 
-# How to run or build or install or anything else you say
+## How to run or build
+
 1. ⬇ Download the zip and extract it
 2. 🖥 Run `npm i` or `bun i` to install frontend dependencies
 3. 🖥 Run `bun tauri dev` or `npm run tauri dev` to run application in development mode
