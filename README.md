@@ -2,14 +2,11 @@
 
 An application that is written for saving some texts into your desktop and copy them easier
 
-![Image of main page]
-(<https://github.com/erfan114/clicopy/blob/main/assets/images/image_1.png>)
+![Image of main page](<https://github.com/erfan114/clicopy/blob/main/assets/images/image_1.png>)
 
-![Image of adding new entry]
-(<https://github.com/erfan114/clicopy/blob/main/assets/images/image_2.png>)
+![Image of adding new entry](<https://github.com/erfan114/clicopy/blob/main/assets/images/image_2.png>)
 
-![Image of editing an entry]
-(<https://github.com/erfan114/clicopy/blob/main/assets/images/image_3.png>)
+![Image of editing an entry](<https://github.com/erfan114/clicopy/blob/main/assets/images/image_3.png>)
 
 > [!TIP]
 > The main reason why I wrote this code is [@sajjadcnr12](https://github.com/sajjadcnr12)
