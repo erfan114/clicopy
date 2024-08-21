@@ -2,6 +2,7 @@
 
 An application that is written for saving some texts into your desktop and copy them easier
 
+<<<<<<< HEAD
 ![Image of main page]
 (<https://github.com/erfan114/clicopy/blob/main/assets/images/image_1.png>)
 
@@ -11,6 +12,8 @@ An application that is written for saving some texts into your desktop and copy 
 ![Image of editing an entry]
 (<https://github.com/erfan114/clicopy/blob/main/assets/images/image_3.png>)
 
+=======
+>>>>>>> 9a4c5f1ff8e22656c7797966677bd59e668e6830
 > [!TIP]
 > The main reason why I wrote this code is [@sajjadcnr12](https://github.com/sajjadcnr12)
 
@@ -20,8 +23,23 @@ An application that is written for saving some texts into your desktop and copy 
 - ✅ Entries are editable and deletable
 - ✅ Supports both `Persian` and `English` language
 
+<<<<<<< HEAD
 ## Todos
 
+=======
+# Showcase
+![Image of main page](https://github.com/erfan114/clicopy/blob/main/assets/images/image_1.png)
+
+![Image of adding new entry](https://github.com/erfan114/clicopy/blob/main/assets/images/image_2.png)
+
+![Image of editing an entry](https://github.com/erfan114/clicopy/blob/main/assets/images/image_3.png)
+
+# How to use
+- ▶ Click on the `entry` to copy the url
+- ▶ Double click on the `entry` to edit it
+
+# Todos
+>>>>>>> 9a4c5f1ff8e22656c7797966677bd59e668e6830
 - ⬜ Application settings (Language, Theme, DB Location)
 - ⬜ Image for entries (You can add image on your entries)
 
