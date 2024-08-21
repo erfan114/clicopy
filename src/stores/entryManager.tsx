@@ -1,6 +1,6 @@
 import { createWithSignal } from "solid-zustand";
-import { search } from "../utils/search";
-import { add_entry, Entry, getAllEntries, remove_entry, update_entry } from "../utils/db";
+import { search } from "../helpers/search";
+import { add_entry, Entry, getAllEntries, remove_entry, update_entry } from "../helpers/db";
 
 type States = {
     entries: Entry[];

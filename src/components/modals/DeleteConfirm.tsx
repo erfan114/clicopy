@@ -3,7 +3,7 @@ import useEntryManager from "../../stores/entryManager";
 import useModalManager from "../../stores/modalManager";
 import Button from "../Button";
 import ViewEntryModalContent from "./ViewEntry";
-import { Entry } from "../../utils/db";
+import { Entry } from "../../helpers/db";
 
 export default function DeleteConfirmModalContent(props: Entry) {
 

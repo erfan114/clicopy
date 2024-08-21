@@ -5,7 +5,7 @@ import useModalManager from "../../stores/modalManager";
 import DeleteConfirmModalContent from "./DeleteConfirm";
 import useEntryManager from "../../stores/entryManager";
 import toast from "solid-toast";
-import { Entry } from "../../utils/db";
+import { Entry } from "../../helpers/db";
 
 export default function ViewEntryModalContent(props: Entry) {
 

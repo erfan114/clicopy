@@ -9,7 +9,7 @@ import useModalManager from "../stores/modalManager";
 import ViewEntryModalContent from "./modals/ViewEntry";
 import { createStore } from "solid-js/store";
 import toast from "solid-toast";
-import { Entry } from "../utils/db";
+import { Entry } from "../helpers/db";
 
 export default function Card(props: Entry) {
 
