@@ -1,5 +1,5 @@
 import "./App.css";
-import CardList from "./components/CardList";
+import EntityList from "./components/EntityList";
 import ModalManager from "./containers/ModalManager";
 import NewEntryButton from "./components/NewEntryButton";
 import Search from "./components/Search";
@@ -14,7 +14,7 @@ function App() {
           <NewEntryButton />
         </div>
       </div>
-      <CardList />
+      <EntityList />
       <ModalManager />
       <Toaster position="bottom-left" />
     </div>

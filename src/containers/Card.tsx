@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { JSX } from "solid-js";
 
-export default function Fragment({
+export default function Card({
   class: className,
   ...rest
 }: JSX.HTMLAttributes<HTMLDivElement>) {

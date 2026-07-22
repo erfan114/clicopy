@@ -1,5 +1,5 @@
 import { IconTypes } from "solid-icons";
-import Fragment from "../containers/Fragment";
+import Card from "../containers/Card";
 import { createSignal } from "solid-js";
 import { Motion } from "solid-motionone";
 
@@ -18,7 +18,7 @@ export default function StatusCard({
   const [hovered, setHovered] = createSignal(false);
 
   return (
-    <Fragment
+    <Card
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       class="flex gap-2 font-recursive"
@@ -53,6 +53,6 @@ export default function StatusCard({
         <div class="text-sm text-gray-400">{title}</div>
         <div class="text-xl font-semibold mt-1">{amount}</div>
       </div>
-    </Fragment>
+    </Card>
   );
 }
