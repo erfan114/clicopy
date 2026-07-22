@@ -1,10 +1,10 @@
 import clsx from "clsx";
 import { createMemo, For } from "solid-js";
-import Card from "./EntityCard";
+import Card from "./EntryCard";
 import NewEntryText from "./NewEntryText";
 import useEntryManager from "../stores/entryManager";
 
-export default function EntityList() {
+export default function EntryList() {
   const entries = useEntryManager((state) => state.searchResults);
   const isListEmpty = createMemo(() => !entries().length);
 

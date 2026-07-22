@@ -9,7 +9,7 @@ import { createStore } from "solid-js/store";
 import toast from "solid-toast";
 import { Entry } from "../helpers/db";
 
-export default function EntityCard(props: Entry) {
+export default function EntryCard(props: Entry) {
   const { name, description, text } = props;
 
   const [store, setStore] = createStore({
@@ -47,8 +47,10 @@ export default function EntityCard(props: Entry) {
       onDblClick={doubleClick}
       class="gap-1 relative group flex flex-col shadow-none hover:shadow-none opacity-85 hover:opacity-100 transition cursor-pointer group active:scale-95 select-none border-2 border-transparent hover:border-indigo-500"
     >
-      <div class="font-bold">{name}</div>
-      <div class="line-clamp-1 text-xs">{description || "No description"}</div>
+      <div class="flex">
+        <div class="font-bold flex-1">{name}</div>
+      </div>
+      <p class="line-clamp-1 text-xs">{description || "No description"}</p>
       <FooterTag Icon={RiDocumentClipboardLine}>{text}</FooterTag>
     </Card>
   );
