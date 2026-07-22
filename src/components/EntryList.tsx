@@ -1,24 +1,23 @@
 import clsx from "clsx";
-import { For } from "solid-js";
-import Card from "./Card";
+import { createMemo, For } from "solid-js";
+import Card from "./EntryCard";
 import NewEntryText from "./NewEntryText";
 import useEntryManager from "../stores/entryManager";
 
-export default function CardList() {
+export default function EntryList() {
   const entries = useEntryManager((state) => state.searchResults);
-
-  const listIsEmpty = !entries().length;
+  const isListEmpty = createMemo(() => !entries().length);
 
   return (
     <div
       class={clsx(
         "overflow-auto",
-        listIsEmpty
+        isListEmpty()
           ? "flex h-full justify-center items-center"
           : "items-start grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6",
       )}
     >
-      {listIsEmpty ? (
+      {isListEmpty() ? (
         <span>
           No entry found. Wanna add a <NewEntryText /> ?
         </span>

@@ -6,6 +6,8 @@ import DeleteConfirmModalContent from "./DeleteConfirm";
 import useEntryManager from "../../stores/entryManager";
 import toast from "solid-toast";
 import { Entry } from "../../helpers/db";
+import { MODAL_INFO } from "../../constants/modal";
+import TextArea from "../TextArea";
 
 export default function ViewEntryModalContent(props: Entry) {
   const { name, description, text } = props;
@@ -27,40 +29,41 @@ export default function ViewEntryModalContent(props: Entry) {
     addEntry(store);
 
     toast.success("Changes saved !");
-    closeModal("viewEntry");
+    closeModal(MODAL_INFO.VIEW_ENTRY.id);
   }
 
   function onDelete() {
-    showModal("deleteEntry", <DeleteConfirmModalContent {...props} />);
+    showModal(
+      MODAL_INFO.DELETE_ENTRY,
+      <DeleteConfirmModalContent {...props} />,
+    );
   }
 
   return (
-    <>
-      <div class="flex flex-col gap-2 overflow-y-auto pr-2">
-        <Input
-          onChange={(value) => setStore("name", value)}
-          value={store.name}
-          name="Entry Title"
-          required
-        />
-        <Input
-          onChange={(value) => setStore("description", value)}
-          value={store.description}
-          name="Entry Description"
-        />
-        <Input
-          onChange={(e) => setStore("text", e)}
-          value={store.text}
-          name="Entry Text"
-          required
-        />
-        <div class="grid grid-cols-2 h-8 mt-2 gap-2">
-          <Button onClick={onDelete} class="bg-red-600">
-            Delete
-          </Button>
-          <Button onClick={onSave}>Save</Button>
-        </div>
+    <div class="flex flex-col gap-2 overflow-y-auto pr-2">
+      <Input
+        onChange={(value) => setStore("name", value)}
+        value={store.name}
+        name="Entry Title"
+        required
+      />
+      <Input
+        onChange={(value) => setStore("description", value)}
+        value={store.description}
+        name="Entry Description"
+      />
+      <TextArea
+        onChange={(e) => setStore("text", e)}
+        value={store.text}
+        name="Entry Text"
+        required
+      />
+      <div class="grid grid-cols-2 min-h-8 mt-2 gap-2">
+        <Button onClick={onDelete} class="bg-red-600">
+          Delete
+        </Button>
+        <Button onClick={onSave}>Save</Button>
       </div>
-    </>
+    </div>
   );
 }

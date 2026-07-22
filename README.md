@@ -18,6 +18,9 @@ _Adding a new text entry with name and description_
 ![Editing Entry](./assets/images/image_3.png)
 _Editing an existing text entry_
 
+![Managing Entry](./assets/images/image_4.png)
+_Managing an existing entry_
+
 ## ✨ Features
 
 - 📝 **Text Management**: Save frequently used text snippets with custom names and descriptions

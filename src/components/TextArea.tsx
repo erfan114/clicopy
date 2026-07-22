@@ -2,7 +2,7 @@ import clsx from "clsx";
 import InputLabel from "./InputLabel";
 import { createMemo } from "solid-js";
 
-type InputProps = {
+type TextAreaProps = {
   name: string;
   required?: boolean;
   placeholder?: string;
@@ -10,14 +10,14 @@ type InputProps = {
   onChange?(value: string): void;
   value?: string;
 };
-export default function Input({
+export default function TextArea({
   name,
   required,
   readonly,
   placeholder,
   onChange,
   value,
-}: InputProps) {
+}: TextAreaProps) {
   const inputPlaceholder = createMemo(() => {
     if (required && !placeholder) return "Please fill here (required)";
 
@@ -27,7 +27,7 @@ export default function Input({
   return (
     <label class="flex flex-col rounded-md gap-1">
       <InputLabel value={name} />
-      <input
+      <textarea
         readonly={readonly}
         onChange={(e) => onChange?.(e.target.value)}
         value={value ?? ""}

@@ -4,6 +4,7 @@ import useModalManager from "../../stores/modalManager";
 import Button from "../Button";
 import ViewEntryModalContent from "./ViewEntry";
 import { Entry } from "../../helpers/db";
+import { MODAL_INFO } from "../../constants/modal";
 
 export default function DeleteConfirmModalContent(props: Entry) {
   const showModal = useModalManager((state) => state.showModal);
@@ -15,11 +16,11 @@ export default function DeleteConfirmModalContent(props: Entry) {
     // Delete the modal
     removeEntry(props.id);
     toast.success("Successfully removed !");
-    closeModal("deleteEntry");
+    closeModal(MODAL_INFO.DELETE_ENTRY.id);
   }
 
   function no() {
-    showModal("viewEntry", <ViewEntryModalContent {...props} />);
+    showModal(MODAL_INFO.VIEW_ENTRY, <ViewEntryModalContent {...props} />);
   }
 
   return (
