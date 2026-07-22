@@ -1,19 +1,20 @@
 import { onMount, onCleanup } from "solid-js";
 
-export default function useClickOut(reference: HTMLDivElement | undefined, callback: () => void) {
-    const handleClickOutside = (event: MouseEvent) => {
+export default function useClickOut(
+  reference: HTMLDivElement | undefined,
+  callback: () => void,
+) {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (reference && !reference.contains(event.target as Node)) {
+      callback();
+    }
+  };
 
-        if (reference && !reference.contains(event.target as Node)) {
+  onMount(() => {
+    document.addEventListener("mousedown", handleClickOutside);
 
-            callback();
-        }
-    };
-
-    onMount(() => {
-        document.addEventListener("mousedown", handleClickOutside);
-
-        onCleanup(() => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        });
+    onCleanup(() => {
+      document.removeEventListener("mousedown", handleClickOutside);
     });
+  });
 }

@@ -10,13 +10,13 @@ A modern desktop application for managing and quickly copying frequently used te
 ## 📸 Screenshots
 
 ![Main Interface](./assets/images/image_1.png)
-*Main interface showing saved text entries*
+_Main interface showing saved text entries_
 
 ![Adding New Entry](./assets/images/image_2.png)
-*Adding a new text entry with name and description*
+_Adding a new text entry with name and description_
 
 ![Editing Entry](./assets/images/image_3.png)
-*Editing an existing text entry*
+_Editing an existing text entry_
 
 ## ✨ Features
 
@@ -55,12 +55,14 @@ A modern desktop application for managing and quickly copying frequently used te
 ### Development Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/erfan114/clicopy.git
    cd clicopy
    ```
 
 2. **Install dependencies**
+
    ```bash
    # Using Bun (recommended)
    bun install
@@ -70,6 +72,7 @@ A modern desktop application for managing and quickly copying frequently used te
    ```
 
 3. **Run in development mode**
+
    ```bash
    # Using Bun
    bun tauri dev
