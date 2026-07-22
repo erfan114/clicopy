@@ -1,6 +1,6 @@
 import { onMount, ParentProps } from "solid-js";
 import { Motion } from "solid-motionone";
-import { ModalUniqueID } from "../constants/ModalInfoTable";
+import { ModalUniqueID } from "../constants/modal";
 import useModalManager from "../stores/modalManager";
 import useClickOut from "../hooks/useClickOut";
 import CloseButton from "./CloseButton";

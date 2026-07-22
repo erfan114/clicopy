@@ -4,6 +4,7 @@ import Input from "../Input";
 import useEntryManager from "../../stores/entryManager";
 import useModalManager from "../../stores/modalManager";
 import toast from "solid-toast";
+import { MODAL_INFO } from "../../constants/modal";
 
 export default function NewEntryModalContent() {
   const addEntry = useEntryManager((state) => state.addEntry);
@@ -25,7 +26,7 @@ export default function NewEntryModalContent() {
     });
 
     toast.success("Successfully added !");
-    closeModal("newEntry");
+    closeModal(MODAL_INFO.NEW_ENTRY.id);
   }
 
   return (
