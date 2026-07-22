@@ -1,8 +1,15 @@
-use std::sync::{Arc, Mutex};
+use std::{
+    fs,
+    path::Path,
+    sync::{Arc, Mutex},
+};
 
 use log::{error, info};
 use rusqlite::{params, Connection};
 use serde::{Deserialize, Serialize};
+use tauri::AppHandle;
+
+use crate::development::IS_DEVELOPMENT;
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Entry {
@@ -12,7 +19,7 @@ pub struct Entry {
     text: String,
 }
 
-const DB_PATH: &str = "my_db.db";
+const DB_FILE: &str = "data.db";
 
 pub trait DbConnection {
     fn create_entries_table(&self);
@@ -26,11 +33,34 @@ pub struct SqliteConnection {
     connection: Arc<Mutex<Connection>>,
 }
 
-impl SqliteConnection {}
+impl SqliteConnection {
+    pub fn new(app: &AppHandle) -> Self {
+        let db_directory = match IS_DEVELOPMENT {
+            true => {
+                let dev_dir = "./target";
+
+                println!("Using '{dev_dir}' for database directory");
+                Path::new(dev_dir).to_path_buf()
+            }
+            false => app
+                .path_resolver()
+                .app_data_dir()
+                .expect("Failed to get app data directory"),
+        };
+
+        fs::create_dir_all(&db_directory).expect("Failed to create app data dir");
+
+        Self {
+            connection: Arc::new(Mutex::new(
+                Connection::open(db_directory.join(DB_FILE)).unwrap(),
+            )),
+        }
+    }
+}
 
 impl DbConnection for SqliteConnection {
     fn create_entries_table(&self) {
-        match self.connection.try_lock() {
+        match self.connection.lock() {
             Ok(connection) => {
                 if let Err(e) = connection.execute(
                     "CREATE TABLE IF NOT EXISTS entries (
@@ -51,7 +81,7 @@ impl DbConnection for SqliteConnection {
     }
 
     fn add_entry(&self, name: String, desc: Option<String>, text: String) -> Result<(), ()> {
-        let connection = match self.connection.try_lock() {
+        let connection = match self.connection.lock() {
             Ok(conn) => conn,
             Err(e) => {
                 error!("Failed to acquire lock for adding entry: {:?}", e);
@@ -77,7 +107,7 @@ impl DbConnection for SqliteConnection {
     }
 
     fn remove_entry(&self, id: i32) -> Result<(), ()> {
-        let connection = match self.connection.try_lock() {
+        let connection = match self.connection.lock() {
             Ok(conn) => conn,
             Err(e) => {
                 error!("Failed to acquire lock for removing entry: {:?}", e);
@@ -100,7 +130,7 @@ impl DbConnection for SqliteConnection {
     }
 
     fn get_all_entries(&self) -> Vec<Entry> {
-        let connection = match self.connection.try_lock() {
+        let connection = match self.connection.lock() {
             Ok(conn) => conn,
             Err(e) => {
                 error!("Failed to acquire lock for retrieving entries: {:?}", e);
@@ -151,7 +181,7 @@ impl DbConnection for SqliteConnection {
     }
 
     fn get_entry(&self, id: i32) -> Option<Entry> {
-        let connection = match self.connection.try_lock() {
+        let connection = match self.connection.lock() {
             Ok(conn) => conn,
             Err(e) => {
                 error!(
@@ -182,14 +212,6 @@ impl DbConnection for SqliteConnection {
                 error!("Failed to retrieve entry with id {}: {:?}", id, e);
                 None
             }
-        }
-    }
-}
-
-impl Default for SqliteConnection {
-    fn default() -> Self {
-        Self {
-            connection: Arc::new(Mutex::new(Connection::open(DB_PATH).unwrap())),
         }
     }
 }
