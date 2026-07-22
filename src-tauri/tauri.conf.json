@@ -7,7 +7,7 @@
   },
   "package": {
     "productName": "clicopy",
-    "version": "1.0.1"
+    "version": "1.1.0"
   },
   "tauri": {
     "allowlist": {
@@ -19,7 +19,7 @@
     },
     "windows": [
       {
-        "title": "Clicopy v1.0.1",
+        "title": "Clicopy v1.1.0",
         "focus": true,
         "center": true,
         "height": 600,
