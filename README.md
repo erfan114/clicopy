@@ -1,11 +1,8 @@
 # Clicopy
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Tauri](https://img.shields.io/badge/Tauri-1.0-blue.svg)](https://tauri.app/)
-[![SolidJS](https://img.shields.io/badge/SolidJS-1.7-blue.svg)](https://solidjs.com/)
-[![Rust](https://img.shields.io/badge/Rust-2021-orange.svg)](https://www.rust-lang.org/)
-
 A modern desktop application for managing and quickly copying frequently used text snippets. Built with Tauri, SolidJS, and Rust for optimal performance and cross-platform compatibility.
+
+[![License: MIT](https://img.shields.io/github/license/erfan114/shader-generator)](https://github.com/erfan114/clicopy/blob/main/LICENSE) [![Tauri](https://img.shields.io/badge/Tauri-1.0-blue.svg)](https://tauri.app/) [![SolidJS](https://img.shields.io/badge/SolidJS-1.7-blue.svg)](https://solidjs.com/) [![Rust](https://img.shields.io/badge/Rust-2021-orange.svg)](https://www.rust-lang.org/)
 
 ## 📸 Screenshots
 
